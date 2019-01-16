@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-size: 1.5rem;
+      background-color: #C7D8C6;
+      color: #fff;
+      position: fixed;
+      height: 100%;
+    }
+    input, textarea {
+      font-size: 18px;
+    }
+    .Layout {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+    .Layout>* {
+      flex-basis: 50%;
+      height: 50%;
+    }
+    .Title {
+      text-align: center;
+    }
+    .RecentPosts {
+      background-color: #A9B7C0;
+      /* height: 600px; */
+      overflow-y: scroll;
+    }
+    .RecentPosts::-webkit-scrollbar-track {
+      background-color: #F5F5F5;
+    }
+    .RecentPosts::-webkit-scrollbar {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
+    .RecentPosts::-webkit-scrollbar-thumb {
+      background-color: #C7D8C6;
+    }
+    .Posts {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 80%;
+      margin: auto;
+    }
+    .Post {
+      width: 100%;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 3px #ccc;
+      margin: 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .Post:hover,
+    .Post:active {
+      background-color: #A9B7C0;
+    }
+    .Post h1 {
+      text-shadow:  -0.1px 0.1px 0.1px black,
+                    0.1px -0.1px 0.1px black,
+                    -0.1px -0.1px 0.1px black,
+                    0.1px 0.1px 0.1px black
+    }
+    .Author {
+      margin: 16px 0;
+      text-shadow: none;
+      /* color: #FC4A1A; */
+    }
+    .CurrentPost {
+      background-color: #EFD9C1;
+    }
+    .FullPost {
+      text-align: center;
+      padding: 4px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .FullPost h1 {
+      text-shadow:  -0.1px 0.1px 0.1px black,
+                    0.1px -0.1px 0.1px black,
+                    -0.1px -0.1px 0.1px black,
+                    0.1px 0.1px 0.1px black
+    }
+    .FullPost p {
+      letter-spacing: .5px;
+    }
+
+    .Edit {
+      text-align: right;
+    }
+
+    .Edit label {
+      display: block;
+      color: grey;
+    }
+
+    .Edit button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      color: #fa923f;
+    }
+
+    .Edit button:hover,
+    .Edit button:active {
+      color: #521751;
+    }
+
+    .Edit button.Delete {
+      color: red;
+    }
+    .Edit button.Delete:hover,
+    .Edit button.Delete:active {
+      color: darkred;
+    }
+    .NewPost {
+      flex-basis: 100%;
+      margin: 0 auto;
+    }
+    .NewPost form {
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      flex-flow: column;
+      margin: 0 auto;
+    }
+    .NewPost form>* {
+      margin-top: 16px;
+    }
+    .TextInput input {
+      display: block;
+      width: 100%;
+      height: 30px;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+    .Textarea textarea {
+      display: block;
+      width: 100%;
+      height: 80px;
+      resize: none;
+      box-sizing: border-box;
+    }
+    .NewPost button {
+      padding: 10px;
+      font: inherit;
+      border: 1px solid transparent;
+      background-color: #A9B7C0;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .NewPost button:hover,
+    .NewPost button:active {
+      border: 1px solid white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Layout">
+    <div class="RecentPosts">
+      <h3 class="Title">Recent Posts</h3>
+      <div class="Posts">
+        <article class="Post">
+          <h1>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
+          <div class="Info">
+            <div class="Author">Tyler Schum</div>
+          </div>
+        </article>
+        <article class="Post">
+          <h1>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
+          <div class="Info">
+            <div class="Author">Tyler Schum</div>
+          </div>
+        </article>
+        <article class="Post">
+          <h1>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
+          <div class="Info">
+            <div class="Author">Tyler Schum</div>
+          </div>
+        </article>
+        <article class="Post">
+          <h1>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
+          <div class="Info">
+            <div class="Author">Tyler Schum</div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="CurrentPost">
+      <div class="FullPost">
+        <h1>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h1>
+        <p>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</p>
+        <div class="Edit">
+          <button class="Delete">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div class="NewPost">
+      <form>
+        <div class="TextInput">
+        <label>Title<input type="text" placeholder="Title" /></label>
+        </div>
+        <div class="TextInput">
+          <label>Author<input type="text" placeholder="Author" /></label>
+        </div>
+        <div class="Textarea">
+          <label>Content<textarea type="text" placeholder="Enter Post Content here..."></textarea></label>
+        </div>
+        <button>Add Post</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

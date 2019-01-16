@@ -1,0 +1,22 @@
+.RecentPosts {
+  background-color: #A9B7C0;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.RecentPosts::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+.RecentPosts::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.RecentPosts::-webkit-scrollbar-thumb {
+  background-color: #C7D8C6;
+}
+
+.Title {
+  text-align: center;
+}

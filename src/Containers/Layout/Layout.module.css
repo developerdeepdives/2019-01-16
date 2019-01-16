@@ -1,0 +1,10 @@
+.Layout {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.Layout>* {
+  flex-basis: 50%;
+  height: 50%;
+}
