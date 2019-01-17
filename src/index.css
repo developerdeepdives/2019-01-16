@@ -12,3 +12,7 @@ input,
 textarea {
   font-size: 18px;
 }
+
+#root, .App {
+  height: 100%;
+}

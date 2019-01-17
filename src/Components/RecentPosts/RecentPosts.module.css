@@ -1,6 +1,6 @@
 .RecentPosts {
   background-color: #A9B7C0;
-  height: 600px;
+  /* height: 600px; */
   overflow-y: scroll;
 }
 

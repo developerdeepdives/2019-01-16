@@ -7,6 +7,7 @@ const posts = props => (
   <div className={classes.Posts}>
     {props.posts.map(post => (
       <Post
+        handleSelectPost={() => props.handleSelectPost(post.id)}
         key={post.id}
         author={post.author} 
         title={post.title}

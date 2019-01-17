@@ -3,7 +3,7 @@ import classes from './Post.module.css';
 
 const post = props => {
   return (
-    <article className={classes.Post}>
+    <article onClick={props.handleSelectPost} className={classes.Post}>
       <h1>
         {props.title}
       </h1>
